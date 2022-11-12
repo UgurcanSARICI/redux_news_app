@@ -10,12 +10,12 @@ const newsSlice = createSlice({
   name: "news",
   initialState,
   reducers: {
-    clearNewList: () => {
+    clearNewList: (state) => {
       state.newsList = [];
     },
   },
 });
 
-export const {} = newsSlice.actions;
+export const { clearNewList } = newsSlice.actions;
 
 export default newsSlice.reducer;
