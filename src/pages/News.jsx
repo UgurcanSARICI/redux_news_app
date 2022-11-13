@@ -16,6 +16,12 @@ const News = () => {
 
   useEffect(() => {
     dispatch(getNews());
+
+    //! Cleanup function (ComponentDidUnmount)
+    //! State'de kalan news bilgilerini news sayfasidan ayrildiktan sonra sil.
+    return () => {
+      dispatch(clearNewsList());
+    };
   }, []);
 
   return (
@@ -27,7 +33,7 @@ const News = () => {
       )}
       {loading && (
         <Box display="flex" alignItems="center" justifyContent="center">
-          <img src={loadinGif} alt="gif" />
+          <img src={loadinGif} />
         </Box>
       )}
       {!loading && (

@@ -16,5 +16,16 @@ const authSlice = createSlice({
     },
   },
 });
+
 export const { setUser, clearUser } = authSlice.actions;
 export default authSlice.reducer;
+
+//!Types
+// export const SET_USER = "SET_USER"
+
+//! action creators
+// export const setUser = (payload)=>{
+//   return {type:SET_USER, payload}
+// }
+
+//!reducer

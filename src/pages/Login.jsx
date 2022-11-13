@@ -8,8 +8,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { setUser } from "../features/authSlice";
 import { useDispatch } from "react-redux";
+import { setUser } from "../features/authSlice";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -73,7 +73,7 @@ export default function Login() {
             type="submit"
             fullWidth
             variant="contained"
-            color="primary"
+            color="secondary"
             sx={{ mt: 3, mb: 2 }}
           >
             Sign In

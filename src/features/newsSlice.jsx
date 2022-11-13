@@ -36,7 +36,7 @@ const newsSlice = createSlice({
   name: "news",
   initialState,
   reducers: {
-    clearNewList: (state) => {
+    clearNewsList: (state) => {
       state.newsList = [];
     },
   },
@@ -56,6 +56,6 @@ const newsSlice = createSlice({
   },
 });
 
-export const { clearNewList } = newsSlice.actions;
+export const { clearNewsList } = newsSlice.actions;
 
 export default newsSlice.reducer;
